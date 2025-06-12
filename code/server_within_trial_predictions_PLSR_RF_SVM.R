@@ -102,4 +102,4 @@ print("--------------- Finished with SVM ----------------")
 algorithm <- c("PLSR", "RF", "SVM")
 times.df <- rbind(time_PLSR, time_RF, time_SVM) %>%
   cbind(algorithm) %>% as.data.frame() %>% dplyr::select(algorithm, everything())
-write.csv(time.df, "output/algorithm_runtimes.csv", rownames = F)
+write.csv(times.df, "output/algorithm_runtimes.csv", rownames = F)
